@@ -14,5 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+	$nombre = "Jorge" ; 
+    return view('Home')->with('nombre' , $nombre);
+})->name('Home');
+
+Route::get('saludo/{nombre?}' , function($nombre = "Invitado"){
+	return "Hola " . $nombre;
+})->name('saludo');
+
+
+Route::get('irASaludo' , function(){
+	 echo "<a href ='" . route('saludo') . "'> Saludo </a>" ;
 });
