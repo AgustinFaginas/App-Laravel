@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+		$nombres =[ ['nombre' => 'Nombre 1'],
+		        	['nombre' => 'Nombre 2'],
+		        	['nombre' => 'Nombre 3'],
+					['nombre' => 'Nombre 4']
+				];
+
 Route::get('/', function () {
 	$nombre = "Jorge" ; 
     return view('Home')->with('nombre' , $nombre);
@@ -23,6 +29,4 @@ Route::get('saludo/{nombre?}' , function($nombre = "Invitado"){
 })->name('saludo');
 
 
-Route::get('irASaludo' , function(){
-	 echo "<a href ='" . route('saludo') . "'> Saludo </a>" ;
-});
+Route::view('datos' , 'datos', compact('nombres'))->name('datos');

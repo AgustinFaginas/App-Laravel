@@ -1,11 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Home</title>
-</head>
-<body>
+@extends('layout') 
+
+@section('titulo' , 'Home')
+
+
+@section('content')
+	
+
 	<h1>Home</h1>
 
-	Bienvendi@ <?php echo $nombre ?? "Invitado" ?>
-</body>
+	Bienvendi@  {{$nombre ?? "Invitado"}}
+
+
+@endsection
+
 </html>
