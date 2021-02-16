@@ -6,7 +6,10 @@
 <body>
 	<nav>
 		<ul>
+			<li> <a href="/datos">Nombres</a></li>
+			<li> <a href="/portfolio">Proyectos</a></li>
 			<li> <a href="/saludo">Saludo</a></li>
+
 		</ul>
 	</nav>
 

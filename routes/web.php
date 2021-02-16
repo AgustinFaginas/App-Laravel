@@ -13,11 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-		$nombres =[ ['nombre' => 'Nombre 1'],
-		        	['nombre' => 'Nombre 2'],
-		        	['nombre' => 'Nombre 3'],
-					['nombre' => 'Nombre 4']
-				];
 
 Route::get('/', function () {
 	$nombre = "Jorge" ; 
@@ -29,4 +24,9 @@ Route::get('saludo/{nombre?}' , function($nombre = "Invitado"){
 })->name('saludo');
 
 
-Route::view('datos' , 'datos', compact('nombres'))->name('datos');
+
+Route::get('/datos' , 'DatosController')->name('datos');
+
+Route::get('/portfolio' , 'PortfolioController@index')->name('portfolio');
+
+Route::resource('proyects' , 'PortfolioController');

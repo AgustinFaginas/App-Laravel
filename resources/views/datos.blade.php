@@ -12,7 +12,7 @@
 			<li> {{ $nombreItem['nombre'] }}</li>
 		
 		@empty
-		 <li> No hay proyectos para mostrar </li>
+		 <li> No hay nombres para mostrar </li>
 		@endforelse
 
 	</ul>
