@@ -1,16 +1,16 @@
 @extends('layout') 
 
-@section('titulo' , 'Home')
-
-
+@section('titulo' , 'home')
 @section('content')
-	
 
-	<h1>Home</h1>
+
+<h1>Home</h1>
 
 	Bienvendi@  {{$nombre ?? "Invitado"}}
 
-
 @endsection
 
-</html>
+
+
+
+
