@@ -29,6 +29,8 @@ Route::get('/datos' , 'DatosController')->name('datos');
 
 Route::get('/portfolio' , 'PortfolioController@index')->name('portfolio');
 
-Route::get('/contact' , 'ContactController@index')->name('contact');
+Route::view('/contact' ,'contact')->name('contact');
+Route::post('/contact' , 'ContactController@store')->name('contact');
+
 
 Route::resource('proyects' , 'PortfolioController');
